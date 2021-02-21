@@ -16,6 +16,7 @@ class BankAccountTest {
 
     @Test
     void withdrawal() {
-
+        bankAccount.withdrawal(250);
+        assertEquals(bankAccount.balance, 250);
     }
 }
