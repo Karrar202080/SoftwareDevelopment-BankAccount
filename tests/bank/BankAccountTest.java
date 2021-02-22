@@ -19,4 +19,19 @@ class BankAccountTest {
         bankAccount.withdrawal(250);
         assertEquals(bankAccount.balance, 250);
     }
+
+    @Test
+    void getBalanceTest() {
+        assertEquals(bankAccount.getBalance(), 500);
+    }
+
+    @Test
+    void depositTest() {
+       assertEquals(bankAccount.deposit(400), 900);
+    }
+
+    @Test
+    void addInterstsTest() {
+        assertEquals(bankAccount.addInterests(), -1);
+    }
 }

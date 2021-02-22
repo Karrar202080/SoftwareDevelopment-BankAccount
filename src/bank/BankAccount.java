@@ -12,17 +12,20 @@ public class BankAccount implements Account {
     }
 
     @Override
-    public void addInterests() {
+    public double addInterests() {
         // do nothing - no interests!
+        return -1;
     }
 
+    @Override
     public double getBalance() {
         return balance;
     }
 
-    public void deposit (double amount)
+    public double deposit (double amount)
     {
         this.balance += amount;
+        return this.balance;
     }
 
     public boolean withdrawal(double amount)

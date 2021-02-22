@@ -33,4 +33,9 @@ class CheckingAccountTest {
         when(savingAccountMock.withdrawal(55)).thenReturn(false);
         assertEquals(checkingAccount.makeCheck(1055), false);
     }
+
+    @Test
+    void makeCheckWithoudSavingAccount() {
+        assertEquals(checkingAccount.makeCheck(400), true);
+    }
 }
